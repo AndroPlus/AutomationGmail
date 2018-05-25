@@ -1,13 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class MyTest(object):
 	
 	def __init__(self):
-		options = Options()
-		self.driver = webdriver.Firefox(firefox_options=options, executable_path='D:\Ram\geckodriver.exe')
+		self.driver = webdriver.Chrome(executable_path=r"../ML/chromedriver.exe")
 
 	def loginGmail(self):			
 		self.driver.get("https://mail.google.com/")
